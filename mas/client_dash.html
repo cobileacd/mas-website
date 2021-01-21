@@ -15,13 +15,16 @@
           position: fixed;
           z-index: -100;
         }
-        .centered {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          overflow: auto;
-          /* bring your own prefixes */
-          transform: translate(-50%, -50%);
+        .block {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: flex;
+        }
+        .centered{
+            margin: auto;
         }
         .panel {
           border-radius: 25px;
@@ -32,51 +35,53 @@
 </head>
 <body style="background-color: #292A48;">
 
-    <div class="panel text-white centered shadow">
-        <h1>Dashboard</h1>
-        </br>
-        <div class="row">
-            <div class="col">
-                <div class="card shadow" style="width: 18rem; background-color: #292A48 !important;">
-                    <a href="#"><img class="card-img-top" src="../img/plano.jpg" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="block">
+        <div class="panel text-white centered shadow">
+            <h1>Dashboard</h1>
+            </br>
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow" style="width: 18rem; background-color: #292A48 !important;">
+                        <a href="plano_de_treino.html"><img class="card-img-top" src="../img/plano.jpg" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p class="card-text">Aqui podes ver o teu plano de treino.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow" style="width: 18rem; background-color: #292A48 !important;">
+                        <img class="card-img-top" src="../img/progress.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Aqui podes ver o teu progresso ao longo do tempo!</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card shadow" style="width: 18rem; background-color: #292A48 !important;">
-                    <img class="card-img-top" src="../img/progress.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </br>
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow" style="width: 18rem; background-color: #292A48 !important; margin: auto;">
+                        <img class="card-img-top" src="../img/livestream.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Aqui podes fazer livestream do teu treino para o teu PT ver ao vivo.<p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </br>
-        <div class="row">
-            <div class="col">
-                <div class="card shadow" style="width: 18rem; background-color: #292A48 !important; margin: auto;">
-                    <img class="card-img-top" src="../img/livestream.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+            </br></br>
+            <div style="background-color: #292A48;" class="shadow">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Personal Trainer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        </br></br>
-        <div style="background-color: #292A48;" class="shadow">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Personal Trainer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
-            </ul>
         </div>
     </div>
 

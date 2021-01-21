@@ -14,12 +14,16 @@
           position: fixed;
           z-index: -100;
         }
-        .centered {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          /* bring your own prefixes */
-          transform: translate(-50%, -50%);
+        .block {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: flex;
+        }
+        .centered{
+            margin: auto;
         }
         .panel {
           border-radius: 25px;
@@ -30,46 +34,48 @@
 </head>
 <body style="background-color: #292A48;">
 
-    <div style="background-color: #242538 !important;" class="panel text-white centered shadow">
-        <h1>Registo</h1>
-        </br>
-        <form action="login.html">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col">
-                        <label>First Name:</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="First name">
-                        <div class="d-none text-danger col-form-label" id="fnameError"><i class="fa fa-exclamation-triangle"></i> Min: 3 letras.</div>
-                    </div>
-                    <div class="col">
-                        <label>Last Name:</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Last name">
-                        <div class="d-none text-danger col-form-label" id="lnameError"><i class="fa fa-exclamation-triangle"></i> Min: 3 letras.</div>
+    <div class="block">
+        <div style="background-color: #242538 !important;" class="panel text-white centered shadow">
+            <h1>Registo</h1>
+            </br>
+            <form action="login.html">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label>First Name:</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First name">
+                            <div class="d-none text-danger col-form-label" id="fnameError"><i class="fa fa-exclamation-triangle"></i> Min: 3 letras.</div>
+                        </div>
+                        <div class="col">
+                            <label>Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                            <div class="d-none text-danger col-form-label" id="lnameError"><i class="fa fa-exclamation-triangle"></i> Min: 3 letras.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label>Sou:</label>
-                <select class="custom-select mr-sm-2" id="selectType">
-                    <option selected>Escolhe...</option>
-                    <option value="pt">Personal Trainer</option>
-                    <option value="user">Cliente</option>
-                </select>
-                <div class="d-none text-danger col-form-label" id="selectTypeError"><i class="fa fa-exclamation-triangle"></i> Selecione uma das opções.</div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                <div class="d-none text-danger col-form-label" id="passwordError"><i class="fa fa-exclamation-triangle"></i> Min: 6 caracteres.</div>
-            </div>
-            <button type="submit" class="btn btn-success" onclick="return validate()">Submeter</button>
-            <a style="float: right;" type="button" href="login.html" class="btn btn-outline-success">Voltar</a>
-        </form>
+                <div class="form-group">
+                    <label>Sou:</label>
+                    <select class="custom-select mr-sm-2" id="selectType">
+                        <option selected>Escolhe...</option>
+                        <option value="pt">Personal Trainer</option>
+                        <option value="user">Cliente</option>
+                    </select>
+                    <div class="d-none text-danger col-form-label" id="selectTypeError"><i class="fa fa-exclamation-triangle"></i> Selecione uma das opções.</div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <div class="d-none text-danger col-form-label" id="passwordError"><i class="fa fa-exclamation-triangle"></i> Min: 6 caracteres.</div>
+                </div>
+                <button type="submit" class="btn btn-success" onclick="return validate()">Submeter</button>
+                <a style="float: right;" type="button" href="login.html" class="btn btn-outline-success">Voltar</a>
+            </form>
+        </div>
     </div>
 
 

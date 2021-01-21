@@ -14,12 +14,16 @@
           position: fixed;
           z-index: -100;
         }
-        .centered {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          /* bring your own prefixes */
-          transform: translate(-50%, -50%);
+        .block {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: flex;
+        }
+        .centered{
+            margin: auto;
         }
         .panel {
           border-radius: 25px;
@@ -38,23 +42,25 @@
         pt-pass: teste1234
     </span>
 
-    <div style="background-color: #242538 !important;" class="panel text-white centered shadow">
-        <h1>Login</h1>
-        </br>
-        <form action="client_dash.html">
-            <div class="form-group">
-                <label for="inputEmail">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                <div class="d-none text-danger col-form-label" id="accError"><i class="fa fa-exclamation-triangle"></i> E-mail e/ou password incorretos.</div>
-            </div>
-            <button type="submit" class="btn btn-success" onclick="return validate()">Login</button>
-            <a style="float: right;" type="button" href="register.html" class="btn btn-outline-success">Regista-te</a>
-        </form>
+    <div class="block">
+        <div style="background-color: #242538 !important;" class="panel text-white centered shadow">
+            <h1>Login</h1>
+            </br>
+            <form action="client_dash.html">
+                <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <div class="d-none text-danger col-form-label" id="accError"><i class="fa fa-exclamation-triangle"></i> E-mail e/ou password incorretos.</div>
+                </div>
+                <button type="submit" class="btn btn-success" onclick="return validate()">Login</button>
+                <a style="float: right;" type="button" href="register.html" class="btn btn-outline-success">Regista-te</a>
+            </form>
+        </div>
     </div>
 
 
