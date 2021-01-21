@@ -34,6 +34,11 @@ function validate() {
         displayError("selectTypeError", false);
     }
 
+    if (retVal) {
+        if (_type == 1) $("form").attr("action", "pt_dash.html");
+        else { $("form").attr("action", "get_info.html"); }
+    }
+
     return retVal;
 }
 

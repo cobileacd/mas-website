@@ -2,13 +2,14 @@ var validAccounts = { "testeCliente@gmail.com" : "teste1234", "testePt@gmail.com
 
 /* Função de validação  */
 function validate() {
-    var _mail= document.getElementById("inputEmail").value;
+    var _mail = document.getElementById("inputEmail").value;
     var _password = document.getElementById("inputPassword").value;
 
     for(var acc in validAccounts) {
         var password = validAccounts[acc];
         if (_mail == acc && _password == password) {
             displayError("accError", false);
+            if (acc == "testePt@gmail.com") $("form").attr("action", "pt_dash.html");
             return true;
         }
     }

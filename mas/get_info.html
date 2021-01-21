@@ -36,42 +36,46 @@
 
     <div class="block">
         <div style="background-color: #242538 !important;" class="panel text-white centered shadow-lg">
-            <h1>Registo</h1>
+            <h2>Fala-nos mais sobre ti...</h2>
             </br>
             <form>
                 <div class="form-group">
                     <div class="row">
                         <div class="col">
-                            <label>First Name:</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First name">
-                            <div class="d-none text-danger col-form-label" id="fnameError"><i class="fa fa-exclamation-triangle"></i> Min: 3 letras.</div>
-                        </div>
-                        <div class="col">
-                            <label>Last Name:</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last name">
-                            <div class="d-none text-danger col-form-label" id="lnameError"><i class="fa fa-exclamation-triangle"></i> Min: 3 letras.</div>
+                            <label>Idade:</label>
+                            <input type="text" class="form-control" id="age" placeholder="Idade">
+                            <div class="d-none text-danger col-form-label" id="ageError"><i class="fa fa-exclamation-triangle"></i> Range: [16-90].</div>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Sou:</label>
+                    <label>Sexo:</label>
                     <select class="custom-select mr-sm-2" id="selectType">
                         <option selected>Escolhe...</option>
-                        <option value="pt">Personal Trainer</option>
-                        <option value="user">Cliente</option>
+                        <option value="mas">Masculino</option>
+                        <option value="fem">Feminino</option>
                     </select>
                     <div class="d-none text-danger col-form-label" id="selectTypeError"><i class="fa fa-exclamation-triangle"></i> Selecione uma das opções.</div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail">Email address</label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label for="inputEmail">Altura (cm):</label>
+                    <input type="text" class="form-control" id="altura" placeholder="Altura (cm)">
+                    <div class="d-none text-danger col-form-label" id="heightError"><i class="fa fa-exclamation-triangle"></i> Range: [140-230] cm.</div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword">Password</label>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    <div class="d-none text-danger col-form-label" id="passwordError"><i class="fa fa-exclamation-triangle"></i> Min: 6 caracteres.</div>
+                    <label for="inputEmail">Peso (kg):</label>
+                    <input type="text" class="form-control" id="peso"  placeholder="Peso (kg)">
+                    <div class="d-none text-danger col-form-label" id="weightError"><i class="fa fa-exclamation-triangle"></i> Range: [30-200] kg.</div>
                 </div>
+                <div class="form-group">
+                    <label for="limFisicas">Limitações físicas:</label>
+                        <textarea name="LimFisicas" id="limFisicas" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="doencas">Doenças:</label>
+                        <textarea name="doencas" id="doencas" class="form-control" rows="3"></textarea>
+                </div>
+
                 <button type="submit" class="btn btn-success" onclick="return validate()">Submeter</button>
                 <a style="float: right;" type="button" href="login.html" class="btn btn-outline-success">Voltar</a>
             </form>
@@ -81,7 +85,7 @@
 
     <!-- SCRIPTS -->
 
-    <script src="register.js"></script>
+    <script src="get_info.js"></script>
     <script src="../Scripts/jquery-3.5.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/knockout-3.5.1.js"></script>
