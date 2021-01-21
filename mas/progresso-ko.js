@@ -46,8 +46,17 @@ $(document).ready(function () {
                     return left.date == right.date ? 0 : (left.date < right.date ? -1 : 1);
                 });
             $("#createRecordModal").modal('toggle');
+
+            $("#exampleInputDate1").val('');
+            $("#exampleInputGordura").val('');
+            $("#exampleInputPeso").val('');
+            $("#exampleInputPbicep").val('');
+            $("#exampleInputPbarriga").val('');
+            $("#exampleInputPcoxa").val('');
+            $("#exampleInputPpeito").val('');
+            $("#exampleInputPombro").val('');
         };
-        self.record = function (record) {
+        self.readRecord = function (record) {
             self.tmp = record;
             console.log('readRecord', "[" + record.date + "]");
             $("#exampleInputDate2").val(record.date);
