@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <title>FitLink</title>
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="../Content/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+        <style>
+        #particles-js {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: -100;
+        }
+        .block {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: flex;
+        }
+        .centered{
+            margin: auto;
+        }
+        .panel {
+            border-radius: 25px;
+            background: #242538;
+            padding: 50px;
+        }
+        </style>
+    </head>
+    <body style="background-color: #292A48;">
+        <div class="block">
+            <div class="panel text-white centered shadow-lg" style="width: 70% !important;">
+
+                <h2>Plano de Treino</h2>
+                </br>
+                <ul class="nav nav-tabs justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="click: changeTable(0)" href="#menu">Segunda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="click: changeTable(1)" href="#menu">Terça</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="click: changeTable(2)" href="#menu">Quarta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="click: changeTable(3)" href="#menu">Quinta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="click: changeTable(4)" href="#menu">Sexta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="click: changeTable(5)" href="#menu">Sabado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" data-bind="click: changeTable(6)" href="#menu">Domingo</a>
+                    </li>
+                </ul>
+                </br>
+                <div class="tab-content container">
+                    <div class="tab-pane fade show active" id="menu">
+                        <table class="table table-condensed text-white">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Séries</th>
+                                    <th>Repetições</th>
+                                    <th>Peso (kg)</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: exercise">
+                                <tr>
+                                    <td data-bind="text: name"></td>
+                                    <td data-bind="text: series"></td>
+                                    <td data-bind="text: reps"></td>
+                                    <td data-bind="text: peso"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- NAVBAR -->
+                <div style="background-color: #292A48;" class="shadow">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #40D876;" href="client_dash.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #40D876;" href="#">Personal Trainer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #40D876;" href="accountDetails.html">Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- END NAVBAR -->
+
+        <!-- SCRIPTS -->
+        <script src="../Scripts/jquery-3.5.1.min.js"></script>
+        <script src="../Scripts/bootstrap.bundle.min.js"></script>
+        <script src="../Scripts/knockout-3.5.1.js"></script>
+
+        <!-- Particles JS -->
+        <div id="particles-js"></div>
+        <script src="../Scripts/particles.js"></script>
+        <script src="particlesApp.js"></script>
+
+        <script src="plano_de_treino.js"></script>
+
+    </body>
+</html>
