@@ -88,9 +88,7 @@
                                 <form>
                                     <div class="form-group row">
                                         <label for="exampleInputName1" class="col-sm-2 col-form-label">Name:</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Insert name">
-                                        </div>
+                                        <input type="text" class="form-control col-sm-9" id="exampleInputName1" placeholder="Nome completo do cliente.">
                                     </div>
                                     <div class="form-group form-inline row">
                                         <label class="col-sm-2 col-form-label">Dias da semana:</label>
@@ -104,11 +102,11 @@
                                     </div>
 
                                     <!-- ko foreach: exercises -->
-                                    <div class="form-group form-inline row">
-                                        <label class="col-sm-2 col-form-label" data-bind="text: name"></label>
-                                        <input type="text" class="form-control mr-sm-2" data-bind="attr: {'id' : 'reps'+id }" placeholder="Repetições">
-                                        <input type="text" class="form-control mr-sm-2" data-bind="attr: {'id': 'series'+id}"placeholder="Séries">
-                                        <input type="text" class="form-control" data-bind="attr: {'id':'peso'+id}"placeholder="Peso (kg)">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" data-bind="text: name+':'"></label>
+                                        <input type="text" class="form-control col-sm-3 mr-sm-2" data-bind="attr: {'id': 'reps'+id}" placeholder="Repetições">
+                                        <input type="text" class="form-control col-sm-3 mr-sm-2" data-bind="attr: {'id': 'series'+id}"placeholder="Séries">
+                                        <input type="text" class="form-control col-sm-3" data-bind="attr: {'id': 'peso'+id}"placeholder="Peso (kg)">
                                     </div>
                                     <!-- /ko -->
                                 </form>
@@ -131,9 +129,7 @@
                                 <form>
                                     <div class="form-group row">
                                         <label for="exampleInputName2" class="col-sm-2 col-form-label">Name:</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Insert name">
-                                        </div>
+                                        <input type="text" class="form-control col-sm-9" id="exampleInputName2" placeholder="Nome completo do cliente.">
                                     </div>
                                     <div class="form-group form-inline row">
                                         <label class="col-sm-2 col-form-label">Dias da semana:</label>
@@ -147,11 +143,11 @@
                                     </div>
 
                                     <!-- ko foreach: exercises -->
-                                    <div class="form-group form-inline row">
-                                        <label class="col-sm-2 col-form-label" data-bind="text: name"></label>
-                                        <input type="text" class="form-control mr-sm-2" data-bind="attr: {'id' : 'reps_'+id }" placeholder="Repetições">
-                                        <input type="text" class="form-control mr-sm-2" data-bind="attr: {'id': 'series_'+id}"placeholder="Séries">
-                                        <input type="text" class="form-control" data-bind="attr: {'id':'peso_'+id}"placeholder="Peso (kg)">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" data-bind="text: name+':'"></label>
+                                        <input type="text" class="form-control col-sm-3 mr-sm-2" data-bind="attr: {'id' : 'reps_'+id }" placeholder="Repetições">
+                                        <input type="text" class="form-control col-sm-3 mr-sm-2" data-bind="attr: {'id': 'series_'+id}"placeholder="Séries">
+                                        <input type="text" class="form-control col-sm-3 " data-bind="attr: {'id':'peso_'+id}"placeholder="Peso (kg)">
                                     </div>
                                     <!-- /ko -->
                                 </form>
