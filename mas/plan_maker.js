@@ -58,6 +58,9 @@ $(document).ready(function () {
         };
         self.readRecord = function (record) {
             self.tmp = record;
+            for (i = 0; i < 7; i++) {
+                $('#Checkbox_'+(i+1)).prop('checked', false);
+            }
             var daysWeek = ['2ª', '3ª', '4ª', '5ª', '6ª', 'Sab.', 'Dom.'];
             console.log('readRecord', "[" + record.name + "]");
             $("#exampleInputName2").val(record.name);
