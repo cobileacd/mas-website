@@ -11,7 +11,7 @@ function validate() {
     }
 
     var _altura = document.getElementById("altura").value;
-    if (parseInt(_altura.trim()) < 140 || parseInt(_altura.trim()) > 230) {
+    if (parseInt(_altura.trim()) < 140 || parseInt(_altura.trim()) > 230 || _altura.trim() == '') {
         retVal = false;
         displayError("heightError", true);
     } else {
@@ -19,7 +19,7 @@ function validate() {
     }
 
     var _peso = document.getElementById("peso").value;
-    if (parseInt(_peso.trim()) < 30 || parseInt(_peso.trim()) > 200) {
+    if (parseInt(_peso.trim()) < 30 || parseInt(_peso.trim()) > 200 || _peso.trim() == '') {
         retVal = false;
         displayError("weightError", true);
     } else {
